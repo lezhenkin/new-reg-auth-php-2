@@ -244,7 +244,7 @@ class User
             $sPassword2 = strval(htmlspecialchars(trim($_POST['password2'])));
 
             // Проверяем данные на ошибки
-            if (validateEmail($sEmail))
+            if ($this->validateEmail($sEmail))
             {
                 // Логин и пароли не могут быть пустыми
                 if (empty($sLogin))
