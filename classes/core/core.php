@@ -39,7 +39,7 @@ class Core
             $return = TRUE;
         }
 
-        self::$_autoloadCache[$class] = $return;
+        static::$_autoloadCache[$class] = $return;
 
         return $return;
     }

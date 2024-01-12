@@ -145,7 +145,7 @@ abstract class Core_DataBase
             // Он будет именоваться Core_Database_{$name}, например Core_Database_Pdo или Core_Database_Mysql
 			$driver = __CLASS__ . "_" . ucfirst($name);
 			
-			self::$_instance[$name] = new $driver($aConfig[$name]);
+			static::$_instance[$name] = new $driver($aConfig[$name]);
         }
 
         // Возвращем вызову экземпляр класса для работы с СУБД
