@@ -314,6 +314,17 @@ class Core_Database_Pdo extends Core_DataBase
     }
 
     /**
+     * Очищает массив условий отбора для оператора WHERE
+     * @return object self
+     */
+    public function clearWhere()
+    {
+        $this->_where = [];
+
+        return $this;
+    }
+
+    /**
      * Устанавливает имя таблицы для оператора INSERT
      * @param string $tableName
      * @return object self
