@@ -424,7 +424,9 @@ class User
     {
         // Подключаемся к СУБД
         $oCore_Database = Core_Database::instance();
-        $oCore_Database->select()
+        $oCore_Database->clearSelect()
+            ->clearWhere()
+            ->select()
             ->from('users')
             ->where($field, '=', $value)
             ->where('deleted', '=', 0);
